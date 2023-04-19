@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: grayservice
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster-name: GZ
+logging:
+  level:
+    software.guozw: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+conductor:
+  client:
+    root-uri: http://localhost:8080/api/
+    thread-count: 1

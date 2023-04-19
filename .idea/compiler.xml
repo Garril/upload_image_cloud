@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="img-service" />
+        <module name="beauty_img" />
+        <module name="gray_img" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="deal_with_img" target="1.8" />
+      <module name="start_workflow" target="11" />
+      <module name="upload_image_cloud-main" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="beauty_img" options="-parameters" />
+      <module name="deal_with_img" options="-parameters" />
+      <module name="gray_img" options="-parameters" />
+      <module name="img-service" options="-parameters" />
+      <module name="start_workflow" options="-parameters" />
+    </option>
+  </component>
+</project>

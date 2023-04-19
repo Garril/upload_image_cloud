@@ -1,0 +1,30 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_user?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: imgservice
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster-name: GZ
+  oss:
+    # https://garril-upload.oss-cn-shenzhen.aliyuncs.com/imgs/test.png
+    endpoint: https://oss-cn-shenzhen.aliyuncs.com/imgs # Bucket 所在地域访问域名，例如：https://oss-cn-hangzhou.aliyuncs.com
+    access-key-id: LTAI5t89xxxxxx # 阿里云账号AccessKey ID
+    access-key-secret: 1Eji9xxxxxxxxxxS6Mxoujv1b # 阿里云账号AccessKey Secret
+    bucket-name: garril-upload # Bucket 名称
+mybatis:
+  type-aliases-package: software.guozw.user.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    software.guozw: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
